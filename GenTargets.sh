@@ -1,7 +1,7 @@
 #!/bin/bash
 # Version 2.1
 declare -a TargetsId
-MaxKolTargets=29      #+1
+MaxKolTargets=0      #+1
 Probability=7         #вероятность поражения 10-90%
 RangeX=13000000       #метры
 RangeY=9000000        #метры
@@ -14,8 +14,8 @@ SpeedCm=(250 750)     #250-1000
 TtlBmMax=300          #Максимальное время жизни
 TtlPlMax=200
 TtlCmMax=200
-Sleeptime=1           #задержка
-TempDirectory=/tmp/GenTargets
+Sleeptime=30          #задержка
+TempDirectory=/home/artyom/kr_vko/temp/GenTargets
 DirectoryTargets="$TempDirectory/Targets"
 DestroyDirectory="$TempDirectory/Destroy"
 LogFile=$TempDirectory/GenTargets.log
