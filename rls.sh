@@ -123,7 +123,7 @@ is_to_sprn() {
 }
 
 #Number of targets
-targets_num=10
+targets_num=30
 
 #Координаты круга
 x_center=7000000
@@ -180,7 +180,7 @@ do
       else
         previous_coords_line=${rlsTargets[$target_id]}
         if [ "$previous_coords_line" != "$file_line" ]; then
-          echo "Обнаружена цель ID:$target_id с координатами $x_point $y_point" >> $RlsLogFile
+          echo "Обнаружена цель ID:$target_id с координатами $current_x_point $current_y_point" >> $RlsLogFile
           previous_coords=$(get_coords_from_string $previous_coords_line)
           read previous_x_point previous_y_point <<< "$previous_coords"
           target_speeds=$(calculate_speed $previous_x_point $current_x_point $previous_y_point $current_y_point)
